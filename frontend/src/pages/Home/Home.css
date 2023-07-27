@@ -1,0 +1,48 @@
+header {
+  background-image: url("../../assets/Img/living-room.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 45vh;
+}
+
+.nav-site {
+  padding-left: 2rem;
+}
+
+.nav-home,
+.nav-bigstuff,
+.nav-notsobigstuff,
+.nav-smallstuff {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+
+.home {
+  display: flex;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 125px auto;
+  font-size: 2.3rem;
+  font-style: italic;
+  color: rgba(255, 253, 253, 0.817);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-card {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.home-card img {
+  width: 20vw;
+  height: 37vh;
+}

@@ -1,0 +1,12 @@
+.signup-body {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-formular {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

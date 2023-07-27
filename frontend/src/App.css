@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: rgb(251, 245, 238);
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10rem 2rem;
+  gap: 2rem;
+  position: relative;
+}
+
+.loadingwindow {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.loadingwindow h1 {
+  font-size: 5rem;
+  color: black;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+}

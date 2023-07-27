@@ -1,0 +1,57 @@
+.detail-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.detail-box {
+  height: 70vh;
+  width: 80vw;
+  border: 2px solid rgb(165, 105, 21);
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  min-width: 100%;
+}
+
+.detail-box img {
+  width: 60%;
+}
+
+.details-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-content .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-content .wrapper div {
+  display: flex;
+}
+
+.details-content button {
+  padding: 5px 10px;
+  background-color: rgb(251, 245, 238);
+  border: 1px solid rgb(165, 105, 21);
+  border-radius: 10px;
+}
+
+.editbox-isactive {
+  display: block;
+}
+
+.editbox-nonactive {
+  display: none;
+}
+
+.closebtn-nonactive {
+  display: none;
+}

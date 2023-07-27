@@ -1,0 +1,11 @@
+.addButton {
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  cursor: pointer;
+  background-color: rgb(252, 226, 191);
+  padding: 1rem;
+  font-size: 1.6rem;
+}
