@@ -6,6 +6,11 @@ const Nav = () => {
   return (
     <>
       <nav>
+        <NavLink to="/userprofil" className="nav-link">
+          <div className="nav-site">
+            <h5>User Profil</h5>
+          </div>
+        </NavLink>
         <NavLink to="/usersignup" className="nav-link">
           <div className="nav-site">
             <h5>Sign Up</h5>

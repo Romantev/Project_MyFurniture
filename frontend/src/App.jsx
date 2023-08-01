@@ -8,6 +8,7 @@ import NotSoBigStuff from "./pages/NotSoBigStuff/NotSoBigStuff";
 import SmallStuff from "./pages/SmallStuff/SmallStuff";
 import Details from "./pages/Details/Details";
 import UserSignUp from "./pages/UserSignUp/UserSignUp";
+import UserProfil from "./pages/UserProfil/UserProfil";
 
 function App() {
   const [refresh, setRefresh] = useState(false);
@@ -25,6 +26,7 @@ function App() {
               <Route path="/smallstuff" element={<SmallStuff />} />
               <Route path="/:category/:id" element={<Details />} />
               <Route path="/usersignup" element={<UserSignUp />} />
+              <Route path="/userprofil" element={<UserProfil />} />
             </Routes>
           </BrowserRouter>
         </refreshContext.Provider>

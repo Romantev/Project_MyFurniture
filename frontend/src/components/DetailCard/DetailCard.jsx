@@ -9,7 +9,7 @@ const DetailCard = ({ elm, category }) => {
 
   const handleDelete = async (stuffId) => {
     try {
-      const { data } = await axios.delete(`/api/${category}/${stuffId}`);
+      const { data } = await axios.delete(`/api/stuff/${stuffId}`);
     } catch (error) {
       console.log("handleDelete: ", error);
     }
@@ -18,7 +18,7 @@ const DetailCard = ({ elm, category }) => {
 
   return (
     <div className="detailCard">
-      <img src={elm.image.url} alt={elm.title} />
+      <img src={elm.image?.url} alt={elm.title} />
       <div className="content">
         <h2>{elm.title}</h2>
         <h3>{elm.room}</h3>

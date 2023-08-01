@@ -16,8 +16,11 @@ const NotSoBigStuff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`/api/notsobigstuff`);
-        setStuff(data);
+        const { data } = await axios.get(`/api/stuff`);
+        const notsobigStuff = data.filter((stuff) => {
+          stuff.category === "NotSoBigstuff";
+        });
+        setStuff(notsobigStuff);
       } catch (error) {
         console.log("fetchData: ", error);
       }
@@ -44,9 +47,7 @@ const NotSoBigStuff = () => {
           </div>
         ) : (
           stuff?.map((elm, index) => {
-            return (
-              <DetailCard category={"notsobigstuff"} elm={elm} key={index} />
-            );
+            return <DetailCard elm={elm} key={index} />;
           })
         )}
       </main>

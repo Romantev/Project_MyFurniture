@@ -3,7 +3,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { refreshContext, loadingContext } from "../../context/Context";
 
-const AddNewItem = ({ formIsActive, setFormIsActive, category }) => {
+const AddNewItem = ({ formIsActive, setFormIsActive }) => {
   const { refresh, setRefresh } = useContext(refreshContext);
   const { loading, setLoading } = useContext(loadingContext);
 
@@ -16,7 +16,7 @@ const AddNewItem = ({ formIsActive, setFormIsActive, category }) => {
     setFormIsActive(false);
     handleLoading();
     const formData = new FormData(e.target);
-    const res = await axios.post(`/api/${category}`, formData);
+    const res = await axios.post(`/api/stuff/`, formData);
     e.target.reset();
     setRefresh((prev) => !prev);
   };
@@ -43,6 +43,11 @@ const AddNewItem = ({ formIsActive, setFormIsActive, category }) => {
           name="image"
           className="input-img"
         />
+        <select name="category" id="category">
+          <option value="Bigstuff">Bigstuff</option>
+          <option value="NotSoBigstuff">Notsobigstuff</option>
+          <option value="Smallstuff">Smallstuff</option>
+        </select>
         <select name="room" id="room">
           <option value="Living Room">Living Room</option>
           <option value="Bedroom">Bedroom</option>

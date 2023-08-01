@@ -18,8 +18,9 @@ const BigStuff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`/api/bigstuff`);
-        setStuff(data);
+        const { data } = await axios.get(`/api/stuff`);
+        const bigStuff = data?.filter((stuff) => stuff.category === "Bigstuff");
+        setStuff(bigStuff);
       } catch (error) {
         console.log("fetchData: ", error);
       }
@@ -31,7 +32,7 @@ const BigStuff = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `/api/bigstuff?titleSearch=${searchForTitle}`
+          `/api/stuff?titleSearch=${searchForTitle}`
         );
         setStuff(data);
       } catch (error) {
@@ -45,7 +46,7 @@ const BigStuff = () => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          `/api/bigstuff?searchRoom=${searchForRoom}`
+          `/api/stuff?searchRoom=${searchForRoom}`
         );
         setStuff(data);
       } catch (error) {
@@ -83,7 +84,7 @@ const BigStuff = () => {
           </div>
         ) : (
           stuff?.map((elm, index) => {
-            return <DetailCard elm={elm} key={index} category={"bigstuff"} />;
+            return <DetailCard elm={elm} key={index} />;
           })
         )}
       </main>

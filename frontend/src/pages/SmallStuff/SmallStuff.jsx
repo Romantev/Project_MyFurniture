@@ -16,8 +16,11 @@ const SmallStuff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get(`/api/smallstuff`);
-        setStuff(data);
+        const { data } = await axios.get(`/api/stuff`);
+        const smallStuff = data.filter(
+          (stuff) => stuff.category === "Smallstuff"
+        );
+        setStuff(smallStuff);
       } catch (error) {
         console.log("fetchData: ", error);
       }
@@ -44,7 +47,7 @@ const SmallStuff = () => {
           </div>
         ) : (
           stuff?.map((elm, index) => {
-            return <DetailCard category={"smallstuff"} elm={elm} key={index} />;
+            return <DetailCard elm={elm} key={index} />;
           })
         )}
       </main>
