@@ -5,10 +5,13 @@ import axios from "axios";
 const UserSignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const res = await axios.post("/api/user/signup", formData);
-    console.log(res);
-    e.target.reset();
+    try {
+      const formData = new FormData(e.target);
+      const res = await axios.post("/api/user/signup", formData);
+      e.target.reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -18,7 +21,7 @@ const UserSignUp = () => {
         <form className="user-formular" onSubmit={handleSubmit}>
           <input type="text" placeholder="Name" name="name" />
           <input type="email" placeholder="Email" name="email" />
-          <input type="text" placeholder="Password" name="password" />
+          <input type="password" placeholder="Password" name="password" />
           <input type="file" name="image" />
           <button type="submit">Sign Up</button>
         </form>
